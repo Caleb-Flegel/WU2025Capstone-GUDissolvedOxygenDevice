@@ -54,16 +54,16 @@ if __name__ == '__main__':
     # Turn on agitation pumps
     #   Arduino 0
     print("Turn on Arduino 0 agitation pump")
-    dev0.write(b'EnablePump0')
+    dev0.write(b'EnablePump-0')
     #   Arduino 1
     print("Turn on Arduino 1 agitation pump")
-    dev1.write(b'EnablePump0')
+    dev1.write(b'EnablePump-0')
     #   Arduino 2
     print("Turn on Arduino 2 agitation pump")
-    dev2.write(b'EnablePump0')
+    dev2.write(b'EnablePump-0')
     #   Arduino 3
     print("Turn on Arduino 3 agitation pump")
-    dev3.write(b'EnablePump0')
+    dev3.write(b'EnablePump-0')
 
     while True:
         # Get DO measurements from devices
@@ -103,7 +103,7 @@ if __name__ == '__main__':
             if (not dev0Pump1Enabled):
                 # Pump needs to be turned on
                 print("Turn on dev 0 aeration pump")
-                dev0.write(b'EnablePump1')
+                dev0.write(b'EnablePump-1')
 
                 # Modify pump state
                 dev0Pump1Enabled = True
@@ -113,7 +113,7 @@ if __name__ == '__main__':
             if (dev0Pump1Enabled):
                 # Pump needs to be turned on
                 print("Turn off dev 0 aeration pump")
-                dev0.write(b'DisablePump1')
+                dev0.write(b'DisablePump-1')
 
                 # Modify pump state
                 dev0Pump1Enabled = False
@@ -125,7 +125,7 @@ if __name__ == '__main__':
             if (not dev1Pump1Enabled):
                 # Pump needs to be turned on
                 print("Turn on dev 1 aeration pump")
-                dev1.write(b'EnablePump1')
+                dev1.write(b'EnablePump-1')
 
                 # Modify pump state
                 dev1Pump1Enabled = True
@@ -135,7 +135,7 @@ if __name__ == '__main__':
             if (dev1Pump1Enabled):
                 # Pump needs to be turned on
                 print("Turn off dev 1 aeration pump")
-                dev1.write(b'DisablePump1')
+                dev1.write(b'DisablePump-1')
 
                 # Modify pump state
                 dev1Pump1Enabled = False
@@ -147,7 +147,7 @@ if __name__ == '__main__':
             if (not dev2Pump1Enabled):
                 # Pump needs to be turned on
                 print("Turn on dev 2 aeration pump")
-                dev2.write(b'EnablePump1')
+                dev2.write(b'EnablePump-1')
 
                 # Modify pump state
                 dev2Pump1Enabled = True
@@ -157,7 +157,7 @@ if __name__ == '__main__':
             if (dev2Pump1Enabled):
                 # Pump needs to be turned on
                 print("Turn off dev 2 aeration pump")
-                dev2.write(b'DisablePump1')
+                dev2.write(b'DisablePump-1')
 
                 # Modify pump state
                 dev2Pump1Enabled = False
@@ -169,7 +169,7 @@ if __name__ == '__main__':
             if (not dev3Pump1Enabled):
                 # Pump needs to be turned on
                 print("Turn on dev 3 aeration pump")
-                dev3.write(b'EnablePump1')
+                dev3.write(b'EnablePump-1')
 
                 # Modify pump state
                 dev3Pump1Enabled = True
@@ -179,7 +179,7 @@ if __name__ == '__main__':
             if (dev3Pump1Enabled):
                 # Pump needs to be turned on
                 print("Turn off dev 3 aeration pump")
-                dev3.write(b'DisablePump1')
+                dev3.write(b'DisablePump-1')
 
                 # Modify pump state
                 dev3Pump1Enabled = False
